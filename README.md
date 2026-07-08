@@ -249,11 +249,4 @@ Ensure .env is listed in .gitignore.
 	•	Export timetable as PDF
 	•	Authentication system for administrators
 
-⸻
-
-🚀 Demo 
-
-
-
-https://github.com/user-attachments/assets/98624e58-1e6b-4252-a47b-6134bb673773
 
