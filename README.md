@@ -231,22 +231,24 @@ Ensure .env is listed in .gitignore.
 
 ⸻
 
-🚀 Example Workflow
-	1.	Add courses in the Courses page
-	2.	Add faculty and their specialization
-	3.	Add rooms and facilities
-	4.	Click Generate Timetable
-	5.	AI produces a conflict-free schedule
-	6.	Timetable is saved and displayed
+## 🚀 Example Workflow
+
+1. Add courses in the Courses page
+2. Add faculty and their specialization
+3. Add rooms and facilities
+4. Click **Generate Timetable**
+5. AI produces a conflict-free schedule
+6. Timetable is saved and displayed
 
 ⸻
 
-🔮 Future Improvements
-	•	Multi-department scheduling
-	•	Advanced constraint optimization
-	•	Faculty preference weighting
-	•	Drag-and-drop timetable editor
-	•	Export timetable as PDF
-	•	Authentication system for administrators
+## 🔮 Future Improvements
+
+- Multi-department scheduling
+- Advanced constraint optimization
+- Faculty preference weighting
+- Drag-and-drop timetable editor
+- Export timetable as PDF
+- Authentication system for administrators
 
 
