@@ -15,7 +15,11 @@ dotenv.config({ quiet: true });
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL
+  })
+);
 
 // Connect to database
 dbConnect();
@@ -30,7 +34,12 @@ app.use("/api/notifications", notificationsRouter);
 
 // Server start
 const PORT = process.env.PORT || 5001;
-
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "OK",
+    message: "AI Smart Classroom Backend is running"
+  });
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
