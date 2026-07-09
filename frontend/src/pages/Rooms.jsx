@@ -66,7 +66,7 @@ export default function RoomPage() {
   const fetchRooms = async () => {
     setLoading(true)
     try {
-      const res = await axios.get("http://localhost:5001/api/rooms")
+      const res = await axios.get("https://ai-driven-smart-classroom.onrender.com/api/rooms")
       setRooms(res.data)
     } catch (error) { console.error("Error fetching rooms:", error) }
     finally { setLoading(false) }
@@ -96,9 +96,9 @@ export default function RoomPage() {
         equipment: formData.equipment ? formData.equipment.split(",").map((e) => e.trim()).filter(Boolean) : [],
       }
       if (editingRoom) {
-        await axios.put(`http://localhost:5001/api/rooms/${editingRoom._id}`, payload)
+        await axios.put(`https://ai-driven-smart-classroom.onrender.com/api/rooms/${editingRoom._id}`, payload)
       } else {
-        await axios.post("http://localhost:5001/api/rooms", payload)
+        await axios.post("https://ai-driven-smart-classroom.onrender.com/api/rooms", payload)
       }
       resetForm(); setShowForm(false); fetchRooms()
     } catch (error) { console.error("Error saving room:", error) }
@@ -108,7 +108,7 @@ export default function RoomPage() {
   const handleDeleteRoom = async (id) => {
     if (!confirm("Are you sure you want to delete this room?")) return
     try {
-      await axios.delete(`http://localhost:5001/api/rooms/${id}`)
+      await axios.delete(`https://ai-driven-smart-classroom.onrender.com/api/rooms/${id}`)
       fetchRooms()
     } catch (error) { console.error("Error deleting room:", error) }
   }
